@@ -45,4 +45,3 @@ void TheNeededOnes(string[] array, int newArrayLength, int withWhatCompare)
 }
 
 TheNeededOnes(names, HowManyAreThere(names, 3), 3);
-
