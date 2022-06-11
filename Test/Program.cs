@@ -27,5 +27,22 @@ int HowManyAreThere(string[] array, int withWhatCompare)
     return counter;
 }
 
-Console.WriteLine(HowManyAreThere(names, 3));
+void TheNeededOnes(string[] array, int newArrayLength, int withWhatCompare)
+{
+    int pos = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        int x = array[i].Length;
+        if (x <= withWhatCompare)
+        {
+            string[] chosenElements = new string[newArrayLength];
+            chosenElements[pos] = array[i];
+            if (pos == 0) Console.Write($"{chosenElements[pos]}");
+            else Console.Write($", {chosenElements[pos]}");
+            pos++;
+        }
+    }
+}
+
+TheNeededOnes(names, HowManyAreThere(names, 3), 3);
 
