@@ -14,4 +14,18 @@
 // string[] array2 = new string[] { "1234", "1567", "-2", "computer science" };
 // string[] array3 = new string[] { "Russia", "Denmark", "Kazan" };
 
+string[] names = new string[] { "Tom", "Ellis", "Joe", "Eve", "Billy-Bob", "Lu", "Craig", "Olga" };
+
+int HowManyAreThere(string[] array, int withWhatCompare)
+{
+    int counter = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        int x = array[i].Length;
+        if (x <= withWhatCompare) counter++;
+    }
+    return counter;
+}
+
+Console.WriteLine(HowManyAreThere(names, 3));
 
